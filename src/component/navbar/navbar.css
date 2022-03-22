@@ -1,0 +1,23 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.nav-heading{
+    border: none;
+    border-bottom: 1px solid var(--footerbackground-color);
+}
+.login-section{
+    display: flex;
+    gap: 1rem;
+    text-align: center;
+}
+.badge-icon{
+    font-size: larger;
+}
+.badge-symbol{
+  right: 5px;
+}
+.login-section{
+    margin-right: 1rem;
+}
+
