@@ -1,0 +1,13 @@
+@import url("https://boostweb-ui.netlify.app/component/boostweb.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+:root{
+    --primary-color: rgb(173, 171, 171);
+    --default-color: white;
+    --loginbackground-color: rgb(219, 219, 219);
+    --signbackground-color: rgb(223, 219, 219);
+    --footerbackground-color: rgb(53, 52, 52);
+    --buybutton-color: rgb(116, 114, 114);
+    --discount-color: rgb(26, 192, 26);
+    --wislist-color: red;
+}
