@@ -1,43 +1,44 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './footer.css'
 
 const Footer = () => {
   return (
-    <footer class="footer">
+    <footer className="footer">
                 
-    <div class="category-section">
-        <h2 class="footer-heading">Category</h2>
+    <div className="category-section">
+        <h2 className="footer-heading">Category</h2>
         <ul>
-            <li><a href="#" class="category-link">Sneaker</a></li>
-            <li><a href="#" class="category-link">Loafer</a></li>
-            <li><a href="#" class="category-link">Sports</a></li>
-            <li><a href="#" class="category-link">Casual</a></li>
+            <li><Link to="#" className="category-link">Sneaker</Link></li>
+            <li><Link to="#" className="category-link">Loafer</Link></li>
+            <li><Link to="#" className="category-link">Sports</Link></li>
+            <li><Link to="#" className="category-link">Casual</Link></li>
         </ul>
     </div>
-    <div class="Account">
-        <h2 class="footer-heading">Account</h2>
+    <div className="Account">
+        <h2 className="footer-heading">Account</h2>
         <ul>
-            <li><a href="#" class="account-link">My Account</a></li>
-            <li><a href="#" class="account-link">My Order</a></li>
-            <li><a href="#" class="account-link">Wishlist</a></li>
-            <li><a href="#" class="account-link">Track Order</a></li>
+            <li><Link to="#" className="account-link">My Account</Link></li>
+            <li><Link to="#" className="account-link">My Order</Link></li>
+            <li><Link to="#" className="account-link">Wishlist</Link></li>
+            <li><Link to="#" className="account-link">Track Order</Link></li>
         </ul>
     </div>
-    <div class="contact">
-        <h2 class="footer-heading">Contact Us</h2>
+    <div className="contact">
+        <h2 className="footer-heading">Contact Us</h2>
         <ul>
-            <li><a href="#" class="contact-link">Location: Howarh, Kolkata West Bengal - 722101</a></li>
-            <li><a href="#" class="contact-link">Call Us: +91 0000 000000</a></li>
-            <li><a href="#" class="contact-link">Email: rocky23012001@gmail.com</a></li>
+            <li><Link to="#" className="contact-link">Location: Howarh, Kolkata West Bengal - 722101</Link></li>
+            <li><Link to="#" className="contact-link">Call Us: +91 0000 000000</Link></li>
+            <li><Link to="#" className="contact-link">Email: rocky23012001@gmail.com</Link></li>
         </ul>
     </div>
-    <div class="made-by">
-        <h2 class="footer-heading">Made with ❤️ by ROCKY </h2>
-            <p class="copyright"> © 2021, All rights reserved</p>
-            <div class="social-symbol">
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i> </a>
-                <a href="#"><i class="fa fa-github"> </i></a>
+    <div className="made-by">
+        <h2 className="footer-heading">Made with ❤️ by ROCKY </h2>
+            <p className="copyright"> © 2021, All rights reserved</p>
+            <div className="social-symbol">
+                <Link to="#"><i className="fa fa-linkedin"></i></Link>
+                <Link to="#"><i className="fa fa-twitter"></i> </Link>
+                <Link to="#"><i className="fa fa-github"> </i></Link>
             </div>
     </div>
 
