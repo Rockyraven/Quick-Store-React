@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { brandBanner, kidShoe, menShoe, womenShoe } from '../../assets'
+import { brandBanner, kidShoe, menShoe, womenShoe } from 'assets'
 import './landingpage.css'
 
 export const LandingPage = () => {
@@ -11,7 +11,7 @@ export const LandingPage = () => {
                   <img src={brandBanner} alt="brandBanner" className="banner"/>
                   <div className="search-wrapper">
                       <p className="banner-heading">GET YOURSLEF A NEW BEAST PAIRS!</p>
-                              <Link to="/ProductPage" className="shop-link">Shop Now</Link>
+                              <Link to="/Product" className="shop-link">Shop Now</Link>
                   </div>
               </div>
               <p className="category-heading">Category of Shoes</p>

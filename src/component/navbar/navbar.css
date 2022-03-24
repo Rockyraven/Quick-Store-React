@@ -1,23 +1,49 @@
-body{
-    margin: 0px;
-    padding: 0px;
-}
-.nav-heading{
-    border: none;
-    border-bottom: 1px solid var(--footerbackground-color);
-}
+
+
 .login-section{
     display: flex;
-    gap: 1rem;
     text-align: center;
+    margin-right: 1rem;
+    gap: 1.5rem;
 }
-.badge-icon{
-    font-size: larger;
+.nav-heading{
+    display: flex;
+    height: 4.5rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    border: none;
+    /* background-color: red; */
 }
-.badge-symbol{
-  right: 5px;
+.login-section a,.search-bar a{
+   color: var(--secondary-color);
+   text-decoration: none;
+   font-weight: bold;
+   margin-right: 0.5rem;
+}
+.search-bar{
+    text-align: center;
+    margin-left: 15rem;
+    display: flex;
+    flex-wrap: wrap;
 }
 .login-section{
-    margin-right: 1rem;
+    margin-left: auto;
+    display: flex;
+}
+
+.input-box{
+    height: 3rem;
+    width: 15rem;
+    margin-bottom: 2rem;
+}
+
+.search-button{
+    position: absolute;
+    margin: 0.3rem 16rem;
+}
+.login-section .fa{
+    font-size: 2rem;
 }
 

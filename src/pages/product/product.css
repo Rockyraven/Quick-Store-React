@@ -1,0 +1,36 @@
+.main-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.vertical-card{
+    margin: 2rem 0 1rem 2.5rem;
+    border-color: var(--signbackground-color);
+}
+.price,.image-title{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.actual-price,.image-subtitle{
+    color: var(--primary-color);
+}
+.buy-button{
+    background-color: var(--buybutton-color);
+    padding-bottom: 7px;
+}
+.buy-button:hover{
+    background-color: var(--signbackground-color);
+    color: var(--footerbackground-color);
+}
+.discount{
+    margin-right: 0.2rem;
+    color: var(--discount-color);
+}
+.wiselist-tag{
+    color: var(--wislist-color);
+}
+.range-input{
+    text-align: center;
+}
+.map{
+    display: flex;
+}
