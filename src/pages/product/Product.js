@@ -16,7 +16,7 @@ export const Product = () => {
     <>
     <div className="map">
      <div> <Filter /></div>
-      <div>{product.map(item=><ProductCard title={item.title}  brand={item.brand} price={item.price} discount={item.discount} actualPrice={item.actualPrice} imgSrc={item.image} rating={item.rating}/>) }</div>
+      <div>{product.map(item=><ProductCard title={item.title}  brand={item.brand} rating={item.rating} price={item.price} discount={item.discount} actualPrice={item.actualPrice} imgSrc={item.image} />) }</div>
       </div>
     </>
   )
