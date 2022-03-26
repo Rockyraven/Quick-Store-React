@@ -14,19 +14,19 @@ export const Filter = () => {
             <div class="shoetype-category">
                     <p class="filter-subtitle">Categories</p>
                     <ul>
-                        <li><input type="checkbox"/> <label for="input">Sports Shoes</label></li>
-                        <li><input type="checkbox"/> <label for="input">Formal Shoes</label></li>
-                        <li><input type="checkbox"/> <label for="input">Sneakers Shoes</label></li>
-                        <li><input type="checkbox"/> <label for="input">Casual Shoes</label></li>
-                        <li><input type="checkbox"/> <label for="input">Sandles & Floater</label></li>
+                        <li><input id='input1' type="checkbox"/> <label for="input1">Sports Shoes</label></li>
+                        <li><input id='input2' type="checkbox"/> <label for="input2">Formal Shoes</label></li>
+                        <li><input id='input3' type="checkbox"/> <label for="input3">Sneakers Shoes</label></li>
+                        <li><input id='input4' type="checkbox"/> <label for="input4">Casual Shoes</label></li>
+                        <li><input id='input5' type="checkbox"/> <label for="input5">Sandles & Floater</label></li>
                     </ul>
             </div>
 
             <div class="sortedby-category">
                 <p class="filter-subtitle">Sorted By </p>
                 <ul>
-                    <li><input type="radio"/> <label for="input">Low to High Price</label></li>
-                    <li><input type="radio"/> <label for="input">High to Low Price</label></li>
+                    <li><input id='input6' type="radio"/> <label for="input6">Low to High Price</label></li>
+                    <li><input id='input7' type="radio"/> <label for="input7">High to Low Price</label></li>
                     <li></li>
                 </ul>
             </div>
@@ -41,10 +41,10 @@ export const Filter = () => {
             <div class="rating-category">
                 <p class="filter-subtitle">Rating</p>
                 <ul>
-                    <li><input type="radio"/> <label for="input">4 stars & above</label></li>
-                    <li><input type="radio"/> <label for="input">3 stars & above</label></li>
-                    <li><input type="radio"/> <label for="input">2 stars & above</label></li>
-                    <li><input type="radio"/> <label for="input">1 stars & above</label></li>
+                    <li><input id='input8' type="radio"/> <label for="input8">4 stars & above</label></li>
+                    <li><input id='input9' type="radio"/> <label for="input9">3 stars & above</label></li>
+                    <li><input id='input10' type="radio"/> <label for="input10">2 stars & above</label></li>
+                    <li><input id='input11' type="radio"/> <label for="input11">1 stars & above</label></li>
                 </ul>
             </div>
         </aside>

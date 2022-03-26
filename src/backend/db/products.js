@@ -13,6 +13,7 @@ export const products = [
     title: "Flex Experience ",
     brand: "NIKE",
     price: 5000,
+    rating: 5,
     actualPrice: 4995,
     discount: "30% off"
     },
@@ -22,6 +23,7 @@ export const products = [
     title: "Flex Experience ",
     brand: "NIKE",
     price: 5000,
+    rating: 4,
     actualPrice: 4995,
     discount: "30% off"
   },
@@ -31,6 +33,7 @@ export const products = [
     title: "Flex Experience ",
     brand: "NIKE",
     price: 5000,
+    rating: 2,
     actualPrice: 4995,
     discount: "30% off"
   },
@@ -40,6 +43,7 @@ export const products = [
     title: "Flex Experience ",
     brand: "NIKE",
     price: 5000,
+    rating: 4,
     actualPrice: 4995,
     discount: "30% off"
   },
@@ -49,6 +53,7 @@ export const products = [
     title: "Flex Experience ",
     brand: "NIKE",
     price: 5000,
+    rating: 3,
     actualPrice: 4995,
     discount: "30% off"
   },
@@ -58,6 +63,7 @@ export const products = [
     title: "Flex Experience ",
     brand: "NIKE",
     price: 5000,
+    rating: 2,
     actualPrice: 4995,
     discount: "30% off"
   },
@@ -67,6 +73,7 @@ export const products = [
     title: "Flex Experience ",
     brand: "NIKE",
     price: 5000,
+    rating: 3.2,
     actualPrice: 4995,
     discount: "30% off"
   },

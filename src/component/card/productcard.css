@@ -2,16 +2,19 @@
     display: flex;
 }
 .product-card{
-    height: 22rem;
-    width: 15rem;
+    height: 25rem;
+    width: 17rem;
     border: 1px solid;
     border-radius: 5px;
     margin-left: 5rem;
     flex-wrap: wrap;
     margin: 4rem;
+    border-color: rgb(165, 165, 165);
+    position: relative;
+    line-height: 1.25rem;
 }
 .buy {
-    width: 14rem;
+    width: 16rem;
     padding: 5px;
     display: block;
     text-align: center;
@@ -30,4 +33,31 @@
     width: 100%;
     border-radius: 5px;
  }
- 
+.wish-list-icon{
+    position: absolute;
+    top: 9px;
+    font-size: x-large;
+    color: var(--primary-color);
+
+}
+.wishlist-box{
+    height: 2rem;
+    width: 2rem;
+    border: 1px solid var(--primary-color) ;
+    position: absolute;
+    border-radius: 50%;
+    right: 10px;
+    top: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--default-color);
+}
+.rating-box{
+    height: 1.5rem;
+    width: 3.5rem;
+    background-color: var(--loginbackground-color);
+    border-radius: 1rem;
+    text-align: center;
+    line-height: 1.5rem;
+}
