@@ -1,6 +1,7 @@
 .card-component{
     display: flex;
 }
+
 .product-card{
     height: 25rem;
     width: 17rem;
@@ -9,7 +10,8 @@
     margin-left: 5rem;
     flex-wrap: wrap;
     margin: 4rem;
-    border-color: rgb(165, 165, 165);
+    border-color: rgb(233, 231, 231);
+    /* border: none; */
     position: relative;
     line-height: 1.25rem;
 }
