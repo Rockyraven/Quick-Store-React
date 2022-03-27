@@ -1,6 +1,7 @@
+import { casual1, casual2, casual3, formal1, formal2, formal3, sneaker1, sneaker2, sport2, sport3 } from "assets";
 import { v4 as uuid } from "uuid";
 import './products'
-import { brandBanner, kidShoe, menShoe, womenShoe,imgShoe2, imgShoe3, imgShoe4, imgShoe5, imgShoe6  } from 'assets'
+// import { casual1, casual2, casual3, formal1, formal2, formal3, sneaker1, sneaker2, sport2, sport3 } from 'assets'
 /**
  * Product Database can be added here.
  * You can add products of your wish with different attributes
@@ -9,7 +10,8 @@ import { brandBanner, kidShoe, menShoe, womenShoe,imgShoe2, imgShoe3, imgShoe4, 
 export const products = [
   {
     _id: uuid(),
-    image: imgShoe2,
+    image: casual1,
+    categoryName: "Casual",
     title: "Flex Experience ",
     brand: "NIKE",
     price: 5000,
@@ -19,7 +21,8 @@ export const products = [
     },
   {
     _id: uuid(),
-    image: imgShoe3,
+    image: casual2,
+    categoryName: "Casual",
     title: "Flex Experience ",
     brand: "NIKE",
     price: 5000,
@@ -29,7 +32,8 @@ export const products = [
   },
   {
     _id: uuid(),
-    image: imgShoe4,
+    image: casual3,
+    categoryName: "Casual",
     title: "Flex Experience ",
     brand: "NIKE",
     price: 5000,
@@ -39,7 +43,8 @@ export const products = [
   },
   {
     _id: uuid(),
-    image: imgShoe5,
+    image: formal1,
+    categoryName: "Formal",
     title: "Flex Experience ",
     brand: "NIKE",
     price: 5000,
@@ -49,7 +54,8 @@ export const products = [
   },
   {
     _id: uuid(),
-    image: imgShoe6,
+    image: formal2,
+    categoryName: "Formal",
     title: "Flex Experience ",
     brand: "NIKE",
     price: 5000,
@@ -59,7 +65,8 @@ export const products = [
   },
   {
     _id: uuid(),
-    image: imgShoe3,
+    image: formal3,
+    categoryName: "Sneaker",
     title: "Flex Experience ",
     brand: "NIKE",
     price: 5000,
@@ -69,7 +76,41 @@ export const products = [
   },
   {
     _id: uuid(),
-    image: imgShoe3,
+    image: sneaker1,
+    categoryName: "Sneaker",
+    title: "Flex Experience ",
+    brand: "NIKE",
+    price: 5000,
+    rating: 3.2,
+    actualPrice: 4995,
+    discount: "30% off"
+  },
+  {
+    _id: uuid(),
+    image: sneaker2,
+    categoryName: "Sports",
+    title: "Flex Experience ",
+    brand: "NIKE",
+    price: 5000,
+    rating: 3.2,
+    actualPrice: 4995,
+    discount: "30% off"
+  },
+  {
+    _id: uuid(),
+    image: sport2,
+    categoryName: "Sports",
+    title: "Flex Experience ",
+    brand: "NIKE",
+    price: 5000,
+    rating: 3.2,
+    actualPrice: 4995,
+    discount: "30% off"
+  },
+  {
+    _id: uuid(),
+    image: sport3,
+    categoryName: "Sports",
     title: "Flex Experience ",
     brand: "NIKE",
     price: 5000,

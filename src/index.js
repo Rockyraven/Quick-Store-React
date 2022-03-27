@@ -1,3 +1,4 @@
+import {  ProductProvider } from "context/ProductContext";
 import React from "react";
 import  ReactDOM  from "react-dom";
 import { BrowserRouter } from "react-router-dom";
@@ -9,6 +10,11 @@ import { makeServer } from "./server";
 makeServer();
 
 
-ReactDOM.render(<BrowserRouter><App/></BrowserRouter>
+ReactDOM.render(
+<BrowserRouter>
+<ProductProvider>
+<App/>
+</ProductProvider>
+</BrowserRouter>
 
 ,document.getElementById("root"));

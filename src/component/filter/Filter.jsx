@@ -1,7 +1,9 @@
 import React from 'react'
 import './filter.css'
+import { useProduct } from 'context/ProductContext'
 
 export const Filter = () => {
+    const { category } = useProduct()
   return (
     <div class="filter-main-container">
     <div class="filter-container">
@@ -18,7 +20,6 @@ export const Filter = () => {
                         <li><input id='input2' type="checkbox"/> <label for="input2">Formal Shoes</label></li>
                         <li><input id='input3' type="checkbox"/> <label for="input3">Sneakers Shoes</label></li>
                         <li><input id='input4' type="checkbox"/> <label for="input4">Casual Shoes</label></li>
-                        <li><input id='input5' type="checkbox"/> <label for="input5">Sandles & Floater</label></li>
                     </ul>
             </div>
 
@@ -49,6 +50,7 @@ export const Filter = () => {
             </div>
         </aside>
     </div>
+    {category.map(a=>(<li>{a.categoryName}</li>))}
     </div>
 
   )
