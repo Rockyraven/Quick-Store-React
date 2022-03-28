@@ -6,7 +6,7 @@ import { useProduct } from 'context/ProductContext'
 
 export const Product = () => {
 
-  const {product,category} = useProduct()
+  const {product} = useProduct()
 
   
   return (

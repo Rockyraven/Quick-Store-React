@@ -1,9 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { brandBanner, kidShoe, menShoe, womenShoe } from 'assets'
+import { brandBanner } from 'assets'
 import './landingpage.css'
+import { useProduct } from 'context/ProductContext'
+import { CategoryCard } from 'component/card/CategoryCard'
 
 export const LandingPage = () => {
+    const { category } = useProduct()
     return (
         
         <main>
@@ -16,20 +19,10 @@ export const LandingPage = () => {
               </div>
               <p className="category-heading">Category of Shoes</p>
               <div className="category-wrapper">
-                  <div className="category-men">
-                      <img src={menShoe} alt="menShoe" className="shoe-category"/>
-                      <p className="category-text">Men</p>
-                  </div>
-                  <div className="category-women">
-                      <img src={womenShoe} alt="womenShoe" className="shoe-category"/>
-                      <p className="category-text">women</p>
-                  </div>
-                  <div className="category-kid">
-                      <img src={kidShoe} alt="kidShoe" class="shoe-category"/>
-                      <p class="category-text">Kid</p>
-                  </div>
-              </div>
+            {category.map(item=><CategoryCard key={item._id} Image={item.Image} categoryName={item.categoryName} />)}
+            </div>
           </main>
+          
   
        
     )

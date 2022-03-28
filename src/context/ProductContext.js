@@ -17,10 +17,7 @@ export const ProductProvider = ({children}) => {
         fetch('/api/categories')
         .then(res=>res.json())
         .then(data=>setcategory(data.categories))
-        
-        // console.log("Rocky")
       },[])
-
 
     return(
         
