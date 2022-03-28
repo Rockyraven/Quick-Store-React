@@ -1,9 +1,9 @@
 import React from 'react'
 import './filter.css'
-import { useProduct } from 'context/ProductContext'
+
 
 export const Filter = () => {
-    const { category } = useProduct()
+   
   return (
     <div class="filter-main-container">
     <div class="filter-container">
@@ -50,7 +50,7 @@ export const Filter = () => {
             </div>
         </aside>
     </div>
-    {category.map(a=>(<li>{a.categoryName}</li>))}
+
     </div>
 
   )
