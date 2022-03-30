@@ -1,21 +1,15 @@
-.map{
-    display: flex;
-    height: 100%;
-    width: 100%;
-}
-
 .product-card{
     height: 25rem;
     width: 17rem;
     border: 1px solid;
     border-radius: 5px;
     flex-wrap: wrap;
-    margin: 7rem;
-
     border-color: var(--card-border);
     position: relative;
     line-height: 1.25rem;
+    margin-top: 2.5rem;
 }
+
 .buy {
     width: 16rem;
     padding: 5px;

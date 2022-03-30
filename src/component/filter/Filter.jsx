@@ -1,13 +1,10 @@
 import React from 'react'
 import './filter.css'
 
-
-export const Filter = () => {
-   
+export const Filter = () => {   
   return (
-    <div className="filter-main-container">
-    <div className="filter-container">
-        <aside className="filter-wrapper">
+ 
+        <aside className="filter-wrapper" >
             <div className="filter-heading">
                 <p className="filter">Filter</p>
                 <button className="clear">Clear</button>
@@ -39,6 +36,7 @@ export const Filter = () => {
                     <p className="range-input">range 500 to 10,000</p>
                 </ul>
             </div>
+
             <div className="rating-category">
                 <p className="filter-subtitle">Rating</p>
                 <ul>
@@ -49,9 +47,6 @@ export const Filter = () => {
                 </ul>
             </div>
         </aside>
-    </div>
-
-    </div>
-
+   
   )
 }
