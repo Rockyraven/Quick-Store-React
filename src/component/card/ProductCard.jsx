@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './productcard.css'
 export const ProductCard = ({ title, brand, discount, price, actualPrice, imgSrc, rating }) => {
+    
 const [ color , setColor ] = useState("")
     const ClickHandler = () =>{
         setColor("red");
@@ -8,7 +9,7 @@ const [ color , setColor ] = useState("")
     
     return (
         <>
-        <div>{count}</div>
+   
             <div className="product-container">
                 <div className="product-card">
                     <img src={imgSrc} alt="" />
