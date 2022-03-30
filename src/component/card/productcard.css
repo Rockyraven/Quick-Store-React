@@ -9,9 +9,9 @@
     width: 17rem;
     border: 1px solid;
     border-radius: 5px;
-    margin-left: 5rem;
     flex-wrap: wrap;
-    margin: 4rem;
+    margin: 7rem;
+
     border-color: var(--card-border);
     position: relative;
     line-height: 1.25rem;

@@ -1,18 +1,18 @@
 import React, { useState } from 'react'
 import './productcard.css'
 export const ProductCard = ({ title, brand, discount, price, actualPrice, imgSrc, rating }) => {
-    const [ BgColor , SetBgColor ] = useState("");
 const [ color , setColor ] = useState("")
     const ClickHandler = () =>{
-        SetBgColor("white");
-        setColor("red")
+        setColor("red");
     }
+    
     return (
         <>
-            
+        <div>{count}</div>
+            <div className="product-container">
                 <div className="product-card">
                     <img src={imgSrc} alt="" />
-                    <div className="wishlist-box" onClick={ClickHandler} style={{backgroundColor: BgColor }}>
+                    <div className="wishlist-box" onClick={ClickHandler}   >
                     <i className="wish-list-icon fa fa-heart" style={{color: color }}></i>
                     </div>                   
                     <p className="image-title">{title} </p>
@@ -27,6 +27,7 @@ const [ color , setColor ] = useState("")
                     </div>
                     <button className='buy'>ADD TO CARD</button>
 
+                </div>
                 </div>
             
         </>
