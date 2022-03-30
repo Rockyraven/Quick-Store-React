@@ -1,5 +1,6 @@
 .filter-wrapper{
-    min-height: 100vh;
+    
+    height: 45rem;
     width: 20%;
     flex: 0 0 auto;
     z-index: 2;

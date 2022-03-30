@@ -7,7 +7,7 @@
     border-color: var(--card-border);
     position: relative;
     line-height: 1.25rem;
-    margin-top: 2.5rem;
+    margin: 2.5rem 0;
 }
 
 .buy {
