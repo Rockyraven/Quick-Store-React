@@ -20,7 +20,7 @@ export const Product = () => {
   console.log(filteredData)
   return (
     <>
-  {/* <button onClick={filteredData.map(item => <ProductCard key={item._id} title={item.title} brand={item.brand} rating={item.rating} price={item.price} discount={item.discount} actualPrice={item.actualPrice} imgSrc={item.image} />)}>click</button> */}
+  
       <div className="map">
         <div> <Filter /></div>
         <div className="card-component">
