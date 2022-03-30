@@ -1,8 +1,10 @@
+import { useNav } from 'context/NavContext'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './navbar.css'
 
 export const Navbar = () => {
+    const {wishcount, cartCount} = useNav()
     return (
         <nav className="nav-heading">
 
@@ -18,12 +20,12 @@ export const Navbar = () => {
                 <div className="wishlist-badge badge">
                     <Link to="/wishlist"> <i className="badge-icon fa fa-heart"></i>
                         <p className="names">wishlist</p>
-                        <span className="badge-symbol">3</span></Link>
+                        <span className="badge-symbol">{wishcount}</span></Link>
                 </div>
                 <div className="cart-badge badge">
                     <Link to="/cart"> <i className="badge-icon fa fa-shopping-cart"></i>
                         <p className="names">Cart</p>
-                        <span className="badge-symbol ">5</span></Link>
+                        <span className="badge-symbol ">{cartCount}</span></Link>
                 </div>
             </div>
         </nav>
