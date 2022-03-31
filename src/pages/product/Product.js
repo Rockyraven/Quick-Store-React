@@ -7,7 +7,6 @@ import { useProduct } from 'context/ProductContext'
 export const Product = () => {
 
   const {product} = useProduct()
-
   
   return (
     <>
