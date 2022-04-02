@@ -1,21 +1,15 @@
-.map{
-    display: flex;
-    height: 100%;
-    width: 100%;
-}
-
 .product-card{
     height: 25rem;
     width: 17rem;
     border: 1px solid;
     border-radius: 5px;
-    margin-left: 5rem;
     flex-wrap: wrap;
-    margin: 4rem;
-    border-color: rgb(233, 231, 231);
+    border-color: var(--card-border);
     position: relative;
     line-height: 1.25rem;
+    margin: 2.5rem 0;
 }
+
 .buy {
     width: 16rem;
     padding: 5px;
@@ -25,6 +19,7 @@
     border: none;
     font-weight: 500;
     border-radius: 5px;
+    color: var(--default-color);
     background-color: var(--buybutton-color);
 }
 .buy:hover{

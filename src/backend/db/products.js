@@ -1,7 +1,7 @@
 import { casual1, casual2, casual3, formal1, formal2, formal3, sneaker1, sneaker2, sport2, sport3 } from "assets";
 import { v4 as uuid } from "uuid";
 import './products'
-// import { casual1, casual2, casual3, formal1, formal2, formal3, sneaker1, sneaker2, sport2, sport3 } from 'assets'
+
 /**
  * Product Database can be added here.
  * You can add products of your wish with different attributes
@@ -12,110 +12,110 @@ export const products = [
     _id: uuid(),
     image: casual1,
     categoryName: "Casual",
-    title: "Flex Experience ",
+    title: "Robbie Experience ",
     brand: "NIKE",
-    price: 5000,
+    price: 7999,
     rating: 5,
-    actualPrice: 4995,
-    discount: "30% off"
+    actualPrice: 9999,
+    discount: "33% off"
     },
   {
     _id: uuid(),
     image: casual2,
     categoryName: "Casual",
-    title: "Flex Experience ",
-    brand: "NIKE",
-    price: 5000,
+    title: "Turbo Glide ",
+    brand: "PUMA",
+    price: 4999,
     rating: 4,
-    actualPrice: 4995,
-    discount: "30% off"
+    actualPrice: 7999,
+    discount: "45% off"
   },
   {
     _id: uuid(),
     image: casual3,
     categoryName: "Casual",
-    title: "Flex Experience ",
-    brand: "NIKE",
-    price: 5000,
+    title: "SOCKS Running ",
+    brand: "Reebok",
+    price: 999,
     rating: 2,
-    actualPrice: 4995,
-    discount: "30% off"
+    actualPrice: 1999,
+    discount: "11% off"
   },
   {
     _id: uuid(),
     image: formal1,
     categoryName: "Formal",
     title: "Flex Experience ",
-    brand: "NIKE",
-    price: 5000,
+    brand: "Braton",
+    price: 2999,
     rating: 4,
-    actualPrice: 4995,
-    discount: "30% off"
+    actualPrice: 4999,
+    discount: "80% off"
   },
   {
     _id: uuid(),
     image: formal2,
     categoryName: "Formal",
-    title: "Flex Experience ",
-    brand: "NIKE",
-    price: 5000,
+    title: "Socks Stylist ",
+    brand: "Sparky",
+    price: 3999,
     rating: 3,
     actualPrice: 4995,
-    discount: "30% off"
+    discount: "50% off"
   },
   {
     _id: uuid(),
     image: formal3,
     categoryName: "Sneaker",
-    title: "Flex Experience ",
+    title: "Canvas Sneaker ",
     brand: "NIKE",
     price: 5000,
     rating: 2,
-    actualPrice: 4995,
-    discount: "30% off"
+    actualPrice: 7995,
+    discount: "66% off"
   },
   {
     _id: uuid(),
     image: sneaker1,
     categoryName: "Sneaker",
-    title: "Flex Experience ",
-    brand: "NIKE",
-    price: 5000,
+    title: "Stylist & Premium ",
+    brand: "AADI",
+    price: 4500,
     rating: 3.2,
-    actualPrice: 4995,
-    discount: "30% off"
+    actualPrice: 5995,
+    discount: "73% off"
   },
   {
     _id: uuid(),
     image: sneaker2,
     categoryName: "Sports",
     title: "Flex Experience ",
-    brand: "NIKE",
-    price: 5000,
+    brand: "HOTSTYLE",
+    price: 3500,
     rating: 3.2,
-    actualPrice: 4995,
-    discount: "30% off"
+    actualPrice: 4999,
+    discount: "35% off"
   },
   {
     _id: uuid(),
     image: sport2,
     categoryName: "Sports",
-    title: "Flex Experience ",
-    brand: "NIKE",
-    price: 5000,
+    title: "Hustle V2",
+    brand: "T-ROCK",
+    price: 4990,
     rating: 3.2,
-    actualPrice: 4995,
-    discount: "30% off"
+    actualPrice: 7999,
+    discount: "60% off"
   },
   {
     _id: uuid(),
     image: sport3,
     categoryName: "Sports",
-    title: "Flex Experience ",
-    brand: "NIKE",
-    price: 5000,
+    title: "Fit-Man Slip ",
+    brand: "ASIAN",
+    price: 2300,
     rating: 3.2,
-    actualPrice: 4995,
-    discount: "30% off"
+    actualPrice: 4595,
+    discount: "35% off"
   },
 ];

@@ -2,35 +2,28 @@
     display: flex;
     flex-wrap: wrap;
 }
-.vertical-card{
-    margin: 2rem 0 1rem 2.5rem;
-    border-color: var(--signbackground-color);
-}
 .price,.image-title{
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 700;
 }
 .actual-price,.image-subtitle{
     color: var(--primary-color);
 }
-.buy-button{
-    background-color: var(--buybutton-color);
-    padding-bottom: 7px;
-}
-.buy-button:hover{
-    background-color: var(--signbackground-color);
-    color: var(--footerbackground-color);
-}
-.discount{
-    margin-right: 0.2rem;
+.discount-price{
+    margin-right: 0.8rem;
     color: var(--discount-color);
+    font-weight: 500;
+    margin-left: auto;
 }
-.wiselist-tag{
-    color: var(--wislist-color);
-}
-.range-input{
-    text-align: center;
-}
-.map{
+.product-page-container{
     display: flex;
+}
+.card-component{
+    margin-top: 4.5rem;
+    min-height: 100vh;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
 }
