@@ -16,7 +16,8 @@ export const Product = () => {
     Casual: false,
     Formal: false,
     Sneaker: false,
-    rating: false
+    rating: false,
+    rating: ""
   });
   const categoryFilteredProduct = categoryFiltered(
     product,
@@ -26,10 +27,9 @@ export const Product = () => {
     categoryFilteredProduct,
     state.sortBy
   );
-  const ratfilter = ratingFilter(
-    PriceWishFilter,
-    state.rating,
-    console.log("rocky")
+  const ratingFilterProduct = ratingFilter(
+    product,
+    state.rating
   )
 
   return (
