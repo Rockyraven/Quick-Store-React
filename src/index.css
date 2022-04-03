@@ -2,10 +2,10 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 
 :root{
-    --primary-color: rgb(173, 171, 171);
+    --primary-color: #adabab;
     --default-color: white;
-    --loginbackground-color: rgb(219, 219, 219);
-    --signbackground-color: rgb(243, 243, 243);
+    --loginbackground-color: #dbdbdb;
+    --signbackground-color: hsl(0, 0%, 95%);
     --footerbackground-color: rgb(53, 52, 52);
     --buybutton-color: rgb(116, 114, 114);
     --discount-color: rgb(26, 192, 26);
