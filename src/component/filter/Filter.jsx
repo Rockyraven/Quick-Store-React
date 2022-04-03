@@ -122,6 +122,14 @@ export const Filter = ({ dispatch, state }) => {
                          onChange={() => dispatch({ type: "twoStar" })}
                      />
                     <label htmlFor="input11"> 1 stars & above</label></li>
+                    <li>
+                        <input
+                         type="radio"
+                         id='input12'
+                         checked={state.rating === "oneStar"}
+                         onChange={() => dispatch({ type: "oneStar" })}
+                     />
+                    <label htmlFor="input12"> 1 stars & below</label></li>
 
                 </ul>
             </div>
