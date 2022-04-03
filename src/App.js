@@ -3,8 +3,6 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Footer, Navbar } from 'component'
 import { Product, LandingPage } from 'pages'
 
-
-
 export const App = () => {
   return (
     <>
