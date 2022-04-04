@@ -13,7 +13,7 @@ export const Filter = ({ dispatch, state }) => {
             </div>
 
             <div className="shoetype-category">
-                <p className="filter-subtitle">Categories</p>
+                <p className="filter-subtitle">Shoe Category</p>
                 <ul>
                    
                     <li>
@@ -54,6 +54,44 @@ export const Filter = ({ dispatch, state }) => {
                     </li>
                 </ul>
             </div>
+
+            <div className="shoetype-category">
+                <p className="filter-subtitle">Brand</p>
+                <ul>
+            
+                    <li>
+                        <input
+                            type="checkbox"
+                            id="input-1"
+                            checked={state.nike}
+                            onChange={() => dispatch({ type: "NIKE_SHOE" })}
+                        />
+                        <label htmlFor="input-2"> NIKE</label>
+                    </li>
+                    <li>
+                        <input
+                            type="checkbox"
+                            id="input-1"
+                            checked={state.puma}
+                            onChange={() => dispatch({ type: "PUMA_SHOE" })}
+                        />
+                        <label htmlFor="input-2"> PUMA</label>
+                    </li>
+                    <li>
+                        <input
+                            type="checkbox"
+                            id="input-3"
+                            checked={state.aadi}
+                            onChange={() => dispatch({ type: "AADI_SHOE" })}
+                        />
+                        <label htmlFor="input-3"> AADI</label>
+                    </li>
+
+                  
+                </ul>
+
+            </div>
+            
 
             <div className="sortedby-category">
                 <p className="filter-subtitle">Sorted By </p>

@@ -7,6 +7,7 @@ import { reducer } from 'reducer/filter-reducer'
 import { getPriceWishFilter } from 'filterFuntion/sort'
 import { categoryFiltered } from 'filterFuntion/filter-category'
 import { ratingFilter } from 'filterFuntion/ratingFilter'
+import { brandFiltered } from 'filterFuntion/brand-category'
 
 export const Product = () => {
   const { product } = useProduct()
@@ -16,10 +17,16 @@ export const Product = () => {
     Casual: false,
     Formal: false,
     Sneaker: false,
-    rating: false,
-    rating: ""
+    nike: false,
+    puma: false,
+    aadi: false
+   
   });
   const categoryFilteredProduct = categoryFiltered(
+    product,
+    state
+  );
+  const brandFilteredProduct = brandFiltered(
     product,
     state
   );
