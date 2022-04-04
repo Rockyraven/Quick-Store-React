@@ -3,6 +3,7 @@ import './filter.css'
 
 export const Filter = ({ dispatch, state }) => {
     console.log(state.checked);
+    
     return (
 
         <aside className="filter-wrapper" >
@@ -12,7 +13,7 @@ export const Filter = ({ dispatch, state }) => {
             </div>
 
             <div className="shoetype-category">
-                <p className="filter-subtitle">Categories</p>
+                <p className="filter-subtitle">Shoe Category</p>
                 <ul>
                    
                     <li>
@@ -54,6 +55,44 @@ export const Filter = ({ dispatch, state }) => {
                 </ul>
             </div>
 
+            <div className="shoetype-category">
+                <p className="filter-subtitle">Brand</p>
+                <ul>
+            
+                    <li>
+                        <input
+                            type="checkbox"
+                            id="input-1"
+                            checked={state.nike}
+                            onChange={() => dispatch({ type: "NIKE_SHOE" })}
+                        />
+                        <label htmlFor="input-2"> NIKE</label>
+                    </li>
+                    <li>
+                        <input
+                            type="checkbox"
+                            id="input-1"
+                            checked={state.puma}
+                            onChange={() => dispatch({ type: "PUMA_SHOE" })}
+                        />
+                        <label htmlFor="input-2"> PUMA</label>
+                    </li>
+                    <li>
+                        <input
+                            type="checkbox"
+                            id="input-3"
+                            checked={state.aadi}
+                            onChange={() => dispatch({ type: "AADI_SHOE" })}
+                        />
+                        <label htmlFor="input-3"> AADI</label>
+                    </li>
+
+                  
+                </ul>
+
+            </div>
+            
+
             <div className="sortedby-category">
                 <p className="filter-subtitle">Sorted By </p>
                 <ul>
@@ -86,13 +125,14 @@ export const Filter = ({ dispatch, state }) => {
                     <p className="range-input">range 500 to 10,000</p>
                 </ul>
             </div>
+            
 
             <div className="rating-category">
                 <p className="filter-subtitle">Rating</p>
                 <ul>
                     <li>
                         <input
-                         type="radio"
+                         type="checkbox"
                          id='input8'
                          checked={state.rating === "fiveStar"}
                          onChange={() => dispatch({ type: "fiveStar" })}
@@ -100,7 +140,7 @@ export const Filter = ({ dispatch, state }) => {
                     <label htmlFor="input8"> 4 stars & above</label></li>
                     <li>
                         <input
-                         type="radio"
+                         type="checkbox"
                          id='input9'
                          checked={state.rating === "fourStar"}
                          onChange={() => dispatch({ type: "fourStar" })}
@@ -108,7 +148,7 @@ export const Filter = ({ dispatch, state }) => {
                     <label htmlFor="input9"> 3 stars & above</label></li>
                     <li>
                         <input
-                         type="radio"
+                         type="checkbox"
                          id='input10'
                          checked={state.rating === "threeStar"}
                          onChange={() => dispatch({ type: "threeStar" })}
@@ -116,7 +156,7 @@ export const Filter = ({ dispatch, state }) => {
                     <label htmlFor="input10"> 2 stars & above</label></li>
                     <li>
                         <input
-                         type="radio"
+                         type="checkbox"
                          id='input11'
                          checked={state.rating === "twoStar"}
                          onChange={() => dispatch({ type: "twoStar" })}
@@ -124,7 +164,7 @@ export const Filter = ({ dispatch, state }) => {
                     <label htmlFor="input11"> 1 stars & above</label></li>
                     <li>
                         <input
-                         type="radio"
+                         type="checkbox"
                          id='input12'
                          checked={state.rating === "oneStar"}
                          onChange={() => dispatch({ type: "oneStar" })}
