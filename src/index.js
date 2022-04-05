@@ -1,3 +1,4 @@
+import { AuthProvider } from "context/AuthContext";
 import { NavProvider } from "context/NavContext";
 import { ProductProvider } from "context/ProductContext";
 import React from "react";
@@ -12,12 +13,13 @@ makeServer();
 
 
 ReactDOM.render(
-    
+    <AuthProvider>
         <NavProvider>
             <ProductProvider>
                 <App />
             </ProductProvider>
         </NavProvider>
+    </AuthProvider>
    
 
     , document.getElementById("root"));
