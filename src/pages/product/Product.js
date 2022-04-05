@@ -16,11 +16,7 @@ export const Product = () => {
     Sports: false,
     Casual: false,
     Formal: false,
-    Sneaker: false,
-    nike: false,
-    puma: false,
-    aadi: false
-   
+    Sneaker: false
   });
   const categoryFilteredProduct = categoryFiltered(
     product,
