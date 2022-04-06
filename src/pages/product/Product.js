@@ -45,7 +45,7 @@ export const Product = () => {
       <Filter dispatch={dispatch} state={state} />
      
       <div className="card-component">
-         {PriceWishFilter.map(item => <ProductCard key={item._id} title={item.title} brand={item.brand} rating={item.rating} price={item.price} discount={item.discount} actualPrice={item.actualPrice} imgSrc={item.image} />)}
+         {PriceWishFilter.map(item => <ProductCard key={item._id} _id={item._id} title={item.title} brand={item.brand} rating={item.rating} price={item.price} discount={item.discount} actualPrice={item.actualPrice} imgSrc={item.image} />)}
       </div>
     </div>
   )

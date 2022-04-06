@@ -2,3 +2,13 @@
     margin: 0px;
     padding: 0px;
 }
+
+/* body{
+    display: flex;
+} */
+.wishlist-card{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 4rem ;
+    gap: 2rem;
+}
