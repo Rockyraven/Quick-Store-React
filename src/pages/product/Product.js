@@ -6,8 +6,8 @@ import { useProduct } from 'context/ProductContext'
 import { reducer } from 'reducer/filter-reducer'
 import { getPriceWishFilter } from 'filterFuntion/sort'
 import { categoryFiltered } from 'filterFuntion/filter-category'
-import { ratingFilter } from 'filterFuntion/ratingFilter'
-import { brandFiltered } from 'filterFuntion/brand-category'
+// import { ratingFilter } from 'filterFuntion/ratingFilter'
+// import { brandFiltered } from 'filterFuntion/brand-category'
 
 export const Product = () => {
   const { product } = useProduct()
@@ -26,18 +26,18 @@ export const Product = () => {
     product,
     state
   );
-  const brandFilteredProduct = brandFiltered(
-    product,
-    state
-  );
+  // const brandFilteredProduct = brandFiltered(
+  //   product,
+  //   state
+  // );
   const PriceWishFilter = getPriceWishFilter(
     categoryFilteredProduct,
     state.sortBy
   );
-  const ratingFilterProduct = ratingFilter(
-    product,
-    state.rating
-  )
+  // const ratingFilterProduct = ratingFilter(
+  //   product,
+  //   state.rating
+  // )
 
   return (
 
