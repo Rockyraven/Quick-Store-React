@@ -1,7 +1,5 @@
-import { useNav } from "context/NavContext";
 import React, { useState } from "react";
 import "./productcard.css";
-import axios from "axios";
 import { useWish } from "context/WishContext";
 export const ProductCard = ({
   title,
@@ -13,36 +11,7 @@ export const ProductCard = ({
   rating,
   _id,
 }) => {
-  const { setcartCount, setwishCount } = useNav();
-  const { wishlist, setWishList } = useWish();
-  const [color, setColor] = useState("");
-
-  const cartHandler = () => {
-    setcartCount((count1) => count1 + 1);
-  };
-
-  const addToWishList = () => {
-    setColor("red");
-    console.log(_id);
-    setwishCount((count) => count + 1);
-    setWishList((list) => [
-      ...list,
-      {
-        _id: _id,
-        title: title,
-        brand: brand,
-        price: price,
-        rating: rating,
-        discount: discount,
-        imgSrc: Image,
-        actualPrice: actualPrice,
-      },
-    ]);
-  };
-
-  const removeFromWishList = () => {
-    console.log("delete");
-  };
+  const { wishlist, addToWishList, removeFromWishList } = useWish();
 
   return (
     <div className="product-card">
@@ -56,7 +25,14 @@ export const ProductCard = ({
           ></i>
         ) : (
           <i
-            onClick={() => addToWishList(_id)}
+            onClick={() => addToWishList({ title,
+              brand,
+              discount,
+              price,
+              actualPrice,
+              imgSrc,
+              rating,
+              _id })}
             className="card-btn-icon fa fa-heart"
           ></i>
         )}
