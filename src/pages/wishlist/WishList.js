@@ -12,6 +12,7 @@ export const WishList = () => {
   return (
    
     <div className='wishlist-container'>
+      <h1 className='wishlist-heading'>WishList Item : {wishlist.length}</h1>
       <div className="wishlist-card">
         {wishlist.map(({ _id,  price, title, brand,rating, discount, imgSrc }) => (
           <ProductCard
