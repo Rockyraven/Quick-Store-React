@@ -20,24 +20,17 @@ export const Product = () => {
     nike: false,
     puma: false,
     aadi: false
-   
   });
+  
   const categoryFilteredProduct = categoryFiltered(
     product,
     state
   );
-  // const brandFilteredProduct = brandFiltered(
-  //   product,
-  //   state
-  // );
+
   const PriceWishFilter = getPriceWishFilter(
     categoryFilteredProduct,
     state.sortBy
   );
-  // const ratingFilterProduct = ratingFilter(
-  //   product,
-  //   state.rating
-  // )
 
   return (
 

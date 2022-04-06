@@ -8,11 +8,6 @@ export const WishList = () => {
     const { wishlist } = useWish();
     const { product } = useProduct();
 
-      // const check = (it) => {
-      //   wishlist.find((item) => item._id === it._id);
-      // }
-
-      // const wishlistItem = wishlist.filter(check);
 
   return (
    

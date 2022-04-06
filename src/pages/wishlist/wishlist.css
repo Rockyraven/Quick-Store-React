@@ -3,9 +3,6 @@
     padding: 0px;
 }
 
-/* body{
-    display: flex;
-} */
 .wishlist-card{
     display: flex;
     flex-wrap: wrap;
