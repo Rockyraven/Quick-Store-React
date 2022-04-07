@@ -11,7 +11,7 @@ export const ProductCard = ({
   rating,
   _id,
 }) => {
-  const { wishlist, addToWishList, removeFromWishList } = useWish();
+  const { wishlist, addToWishList, removeFromWishList, addToCart } = useWish();
 
   return (
     <div className="product-card">
@@ -49,7 +49,14 @@ export const ProductCard = ({
         <p className="actual-price"> {actualPrice}</p>
         <p className="discount-price">{discount}</p>
       </div>
-      <button className="buy">Add To Card</button>
+      <button className="buy"  onClick={() => addToCart({ title,
+              brand,
+              discount,
+              price,
+              actualPrice,
+              imgSrc,
+              rating,
+              _id })}>Add To Card</button>
     </div>
   );
 };

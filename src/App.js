@@ -1,8 +1,8 @@
 import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { Footer, Navbar } from 'component'
-import { Product, LandingPage, Login, WishList } from 'pages'
+import { CartCard, Footer, Navbar } from 'component'
+import { Product, LandingPage, Login, WishList, CartPage } from 'pages'
 import './app.css'
+import { Route, Routes } from 'react-router-dom'
 
 export const App = () => {
   return (
@@ -14,6 +14,7 @@ export const App = () => {
           <Route path='/product' element={<Product />} />
           <Route path='/login' element={<Login/>}/>
           <Route path="/wishlist" element={<WishList />} />
+          <Route path='/cart' element={<CartPage/>} />
         </Routes>
       </div>
       <Footer />

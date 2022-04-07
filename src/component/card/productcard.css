@@ -59,3 +59,18 @@
     text-align: center;
     line-height: 1.5rem;
 }
+.cart-image img{
+    height: 100%;
+    width: 14rem;
+    padding: 5px;
+    margin-right: 10px;
+}
+.cart-content{
+    height: 16rem;
+    width: 27rem;
+    border: 1px solid var(--loginbackground-color);
+    display: flex;
+}
+.description-content{
+    padding: 20px;
+}
