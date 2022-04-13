@@ -20,7 +20,7 @@ export const reducer = (state, action) => {
             return { ...state, Casual: !state.Casual };
 
         case "NIKE_SHOE":
-            return { ...state, nike: !state.nike };
+            return { ...state, nike: !state.nike };          
 
         case "PUMA_SHOE":
             return { ...state, puma: !state.puma };
@@ -28,7 +28,17 @@ export const reducer = (state, action) => {
         case "AADI_SHOE":
             return { ...state, aadi: !state.aadi };
 
-       
+        case "ASIAN_SHOE":
+            return { ...state, asian: !state.asian };
+
+        case "REEBOK_SHOE":
+            return { ...state, reebok: !state.reebok };
+
+        case "BRATON_SHOE":
+            return { ...state, braton: !state.braton };
+
+        case "SPARKY_SHOE":
+            return { ...state, sparky: !state.sparky };
 
         default:
             return state;

@@ -1,13 +1,10 @@
 import { ProductCard } from 'component';
-import { useProduct } from 'context/ProductContext';
 import { useWish } from 'context/WishContext';
 import React from 'react'
 import './wishlist.css'
 
 export const WishList = () => {
     const { wishlist } = useWish();
-    const { product } = useProduct();
-
 
   return (
    

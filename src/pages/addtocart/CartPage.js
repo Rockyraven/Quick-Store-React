@@ -1,17 +1,26 @@
 import { CartCard } from "component";
 import { useWish } from "context/WishContext";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./addtocart.css";
 
 export const CartPage = () => {
-  const { cart } = useWish();
+  const { cart, total } = useWish();
+  const [ totalQuantity, setTotalQuantity ] = useState(0);
+  const quantityHandler = () => {
+    let qty = 0;
+    cart.map(cartItem => qty += cartItem.quantity)
+    setTotalQuantity(qty);
+}
+useEffect(()=> {
+    quantityHandler();
+},[cart])
 
 
   return (
    
     <div className="cart-page">
       <div className="wishlist-card">
-        {cart.map(({ _id, price, title, brand, rating, discount, imgSrc }) => (
+        {cart.map(({ _id, price, title, brand, rating, discount, imgSrc,quantity }) => (
           <CartCard
             _id={_id}
             price={price}
@@ -21,17 +30,18 @@ export const CartPage = () => {
             rating={rating}
             discount={discount}
             imgSrc={imgSrc}
+            quantity={quantity}
           />
         ))}
       </div>
 
 
       <div className="price-container">
-        <aside className="final-price-tag">
+        <div className="final-price-tag">
           <p className="price-heading">Price Details</p>
           <div className="original-price">
-            <p>Price (5 items)</p>
-            <p>2500/-</p>
+            <p>Price ({totalQuantity} items)</p>
+            <p>{total}/-</p>
           </div>
           <div className="discount-price">
             <p>Discount</p>
@@ -44,11 +54,11 @@ export const CartPage = () => {
 
           <div className="total-price">
             <p>Total Amount</p>
-            <p>2100/-</p>
+            <p>{total -500 + 100}/-</p>
           </div>
           <p>You will save ₹500 on this Order</p>
           <button className="place-order">Place Your Order</button>
-        </aside>
+        </div>
       </div>
       </div>
     

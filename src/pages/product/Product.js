@@ -6,8 +6,6 @@ import { useProduct } from 'context/ProductContext'
 import { reducer } from 'reducer/filter-reducer'
 import { getPriceWishFilter } from 'filterFuntion/sort'
 import { categoryFiltered } from 'filterFuntion/filter-category'
-// import { ratingFilter } from 'filterFuntion/ratingFilter'
-// import { brandFiltered } from 'filterFuntion/brand-category'
 
 export const Product = () => {
   const { product } = useProduct()

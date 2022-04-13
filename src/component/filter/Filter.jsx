@@ -2,11 +2,10 @@ import React from 'react'
 import './filter.css'
 
 export const Filter = ({ dispatch, state }) => {
-    console.log(state.checked);
     
     return (
 
-        <aside className="filter-wrapper" >
+        <div className="filter-wrapper" >
             <div className="filter-heading">
                 <p className="filter">Filter</p>
                 <button className="clear">Clear</button>
@@ -66,12 +65,12 @@ export const Filter = ({ dispatch, state }) => {
                             checked={state.nike}
                             onChange={() => dispatch({ type: "NIKE_SHOE" })}
                         />
-                        <label htmlFor="input-2"> NIKE</label>
+                        <label htmlFor="input-1"> NIKE</label>
                     </li>
                     <li>
                         <input
                             type="checkbox"
-                            id="input-1"
+                            id="input-2"
                             checked={state.puma}
                             onChange={() => dispatch({ type: "PUMA_SHOE" })}
                         />
@@ -85,6 +84,42 @@ export const Filter = ({ dispatch, state }) => {
                             onChange={() => dispatch({ type: "AADI_SHOE" })}
                         />
                         <label htmlFor="input-3"> AADI</label>
+                    </li>
+                    <li>
+                        <input
+                            type="checkbox"
+                            id="input-4"
+                            checked={state.asian}
+                            onChange={() => dispatch({ type: "ASIAN_SHOE" })}
+                        />
+                        <label htmlFor="input-4"> ASIAN</label>
+                    </li>
+                    <li>
+                        <input
+                            type="checkbox"
+                            id="input-5"
+                            checked={state.reebok}
+                            onChange={() => dispatch({ type: "REEBOK_SHOE" })}
+                        />
+                        <label htmlFor="input-5"> REEBOK</label>
+                    </li>
+                    <li>
+                        <input
+                            type="checkbox"
+                            id="input-6"
+                            checked={state.braton}
+                            onChange={() => dispatch({ type: "BRATON_SHOE" })}
+                        />
+                        <label htmlFor="input-6"> BRATON</label>
+                    </li>
+                    <li>
+                        <input
+                            type="checkbox"
+                            id="input-7"
+                            checked={state.sparky}
+                            onChange={() => dispatch({ type: "SPARKY_SHOE" })}
+                        />
+                        <label htmlFor="input-7"> SPARKY</label>
                     </li>
 
                   
@@ -173,7 +208,7 @@ export const Filter = ({ dispatch, state }) => {
 
                 </ul>
             </div>
-        </aside>
+        </div>
 
     )
 }
