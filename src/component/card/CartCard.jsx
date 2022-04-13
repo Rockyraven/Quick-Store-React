@@ -41,12 +41,12 @@ import React from 'react'
                                 <h2 className="price">₹{price} </h2>
                                 <h3 className="actual-price"> {actualPrice}</h3>
                                 <p className="discount">{discount}</p>
+                            </div>
                                 <div className="quantity-container">
                                 <button onClick={ () => decreaseQuantity(_id) }>-</button>
                                 <p>{quantity}</p>
                                 <button onClick={ () => increaseQuantity(_id) }>+</button>
                                 </div>
-                            </div>
                             <div className="wishlist-button">
                             <button className="move-wishlist"  onClick={ moveToWishListHandler }>Move to Wishlist</button>
                                 <button className="remove-cart"  onClick={() => removeToCart(_id)}>Remove to Cart</button>

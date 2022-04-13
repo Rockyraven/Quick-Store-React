@@ -33,7 +33,7 @@ export const ProductCard = ({
               imgSrc,
               rating,
               _id })}
-            className="card-btn-icon fa fa-heart"
+            className="wish-list-icon fa fa-heart"
           ></i>
         )}
       </div>
