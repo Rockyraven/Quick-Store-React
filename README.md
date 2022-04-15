@@ -2,7 +2,7 @@
 <div align="center">
   
 # [QuickStore](https://app.netlify.com/sites/boostweb-temp/settings/domain) 
-##  More Styles To See , More Styles To Do
+##  GET YOURSLEF A NEW BEAST PAIRS!
   
 <!--   ![image](https://user-images.githubusercontent.com/91511639/163553337-079970fc-ef46-4521-a415-fd158501f95d.png) -->
 
