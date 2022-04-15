@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import './navbar.css'
 
 export const Navbar = () => {
-    const { wishlist } = useWish()
+    const { wishlist, cart } = useWish()
     return (
         <nav className="nav-heading">
 
@@ -25,7 +25,7 @@ export const Navbar = () => {
                 <div className="cart-badge badge">
                     <Link to="/cart"> <i className="badge-icon fa fa-shopping-cart"></i>
                         <p className="names">Cart</p>
-                        <span className="badge-symbol ">0</span></Link>
+                        <span className="badge-symbol ">{cart.length}</span></Link>
                 </div>
             </div>
         </nav>
