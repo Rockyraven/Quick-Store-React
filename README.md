@@ -1,7 +1,7 @@
 
 <div align="center">
   
-# [QuickStore](https://app.netlify.com/sites/boostweb-temp/settings/domain) 
+# [QuickStore](https://quickstore-react.netlify.app/) 
 ##  GET YOURSLEF A NEW BEAST PAIRS!
   
 <!--   ![image](https://user-images.githubusercontent.com/91511639/163553337-079970fc-ef46-4521-a415-fd158501f95d.png) -->
@@ -19,7 +19,13 @@
 
 # 📖 About 
 
-QuickStore is an e-commerce platform for the Shoe lovers. You can buy various category of shoe products of multiple brands in your favourite category like Sports shoe , Casual shoe, Formal shoe on ShoeShoppers.
+QuickStore is an e-commerce platform for the Shoe lovers. You can buy various category of shoe products of multiple brands in your favourite category like Sports shoe , Casual shoe, Formal shoe on QuickStore.
+
+## Pages available
+1. [ProductPage](https://quickstore-react.netlify.app/Product)
+2. [LoginPage](https://quickstore-react.netlify.app/login)
+3. [WishList](https://quickstore-react.netlify.app/wishlist)
+4. [Cart](https://quickstore-react.netlify.app//cart)
 
 Give it a try today.
 ---
@@ -64,7 +70,7 @@ Give it a try today.
 
 ### In Products Page
 
-  - filter the products based on your preference. Shoeshoppers gives filter options for
+  - filter the products based on your preference. QuickStore gives filter options for
          Sort by Price
          filter by Category
          filter by Brand Category
