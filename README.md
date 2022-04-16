@@ -25,7 +25,7 @@ QuickStore is an e-commerce platform for the Shoe lovers. You can buy various ca
 1. [ProductPage](https://quickstore-react.netlify.app/Product)
 2. [LoginPage](https://quickstore-react.netlify.app/login)
 3. [WishList](https://quickstore-react.netlify.app/wishlist)
-4. [Cart](https://quickstore-react.netlify.app//cart)
+4. [Cart](https://quickstore-react.netlify.app/cart)
 
 Give it a try today.
 ---
