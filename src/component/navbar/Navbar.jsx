@@ -16,7 +16,7 @@ export const Navbar = () => {
                 </div>
             </div>
             <div className="login-section">
-                <Link to="/signin"><i className="badge-icon fa fa-user"></i><p>Login</p></Link>
+                <Link to="/login"><i className="badge-icon fa fa-user"></i><p>Login</p></Link>
                 <div className="wishlist-badge badge">
                     <Link to="/wishlist"> <i className="badge-icon fa fa-heart"></i>
                         <p className="names">wishlist</p>

@@ -3,7 +3,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 const wishlistContext = createContext(null);
 
 const WishProvider = ({ children }) => {
-    
+
   const [cart, setCart] = useState([]);
   const [total, setTotal] = useState(0);
   const [wishlist, setWishList] = useState(
@@ -18,7 +18,6 @@ const WishProvider = ({ children }) => {
 
   // funtions for add to cart and remove card
   const addToWishList = (product) => {
-    // setWishList(prev => [...prev, product ] )
     let isItemExit = wishlist.find((item) => item._id === product._id);
     if (isItemExit) {
       setWishList((prev) =>
