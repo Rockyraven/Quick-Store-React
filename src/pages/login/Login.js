@@ -6,8 +6,8 @@ export const Login = () => {
 
     function setGuestCredential(event) {
         event.preventDefault();
-        setEmail("adarshbalika@gmail.com");
-        setPassword("adarshbalika");
+        setEmail("rocky23@gmail.com");
+        setPassword("rocky2301");
       }
 
     const { loginHandler, setPassword, setEmail, email, password } = useAuth();
@@ -32,7 +32,7 @@ return (
         onChange={(e) => setEmail(e.target.value)}
          />
       <input 
-        type="text"
+        type="password"
         label="password"
         id="outlined-password-input"
         className="input-box"
