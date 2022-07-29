@@ -10,63 +10,45 @@ export const Login = () => {
         setPassword("adarshbalika");
       }
 
-    const { loginUser } = useAuth();
-
-    const [ email, setEmail ] = useState("");
-    const [ password, setPassword ] = useState("");
+    const { loginHandler, setPassword, setEmail, email, password } = useAuth();
 
     const loginButton = ({event,email, password}) => {
         event.preventDefault();
-        loginUser( {email, password});
+        loginHandler( {email, password});
     }
 
-  return (
-    <section class="login-area">
-    <div class="login-container">
-         <h2 >Login</h2>
-         <div class="email-input">
-            <p>Email address</p>
-            <input
-                 type="email"
-                 className="input-box"
-                 name="email"
-                 id='email'
-                 required
-                 value={email}
-                 onChange={(e) => setEmail(e.target.value)}
-            />
-         </div>
-         <div class="password-input">
-             <p>Password</p>
-             <input
-              type="password"
-              className="input-box"
-              id="password"
-              required
-              value={password}
-              onChange = {(e) => setPassword(e.target.value)} 
-              />
-         </div>
-         <div class="checkbox-input">
-            <input type="checkbox" name='remember'/> 
-            <label htmlFor="remember">Remember me</label>
-            <a href="" className="forget-password">Forget Your Password</a>
-        </div>
-        <input
-            className='login-link'
-            type="submit"
-            value="Login"
-            onClick = {(event) => loginButton({event, email, password})} 
-        />
-         <button
-         className='login-link'
-          onClick={(e) => setGuestCredential(e)}
-        >
-          Use guest credentials
-        </button>
-        
-        <a href="/Quickstore/pages/signup.html">Create New Account </a>
+return (
+  <div className="login-page-container">
+    <div className="login-wrapper">
+      <h1 className="login-tilte">Login</h1>
+      <input 
+        type="text"
+        id="outlined-password-input"
+        className="input-box"
+        label="user"
+        autoComplete="current-password"
+        placeholder="User Name"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+         />
+      <input 
+        type="text"
+        label="password"
+        id="outlined-password-input"
+        className="input-box"
+        autoComplete="current-password"
+        placeholder="Password"
+        value={password}
+        onChange = {(e) => setPassword(e.target.value)} 
+         />
+      <button className="demo-login-button"
+        onClick={(e) => setGuestCredential(e)}
+      >
+        Login with guest user
+      </button>
+      <button className="login-button" onClick = {(event) => loginButton({event, email, password})} >Login</button>
     </div>
-</section>
-  )
-}
+  </div>
+);
+};
+
