@@ -1,33 +1,77 @@
 import axios from "axios";
-const { createContext, useState, useContext } = require("react");
+import { useNavigate } from "react-router-dom";
+const { createContext, useState, useContext, useEffect } = require("react");
 
 const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
-    const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
-    const [encodedToken, setEncodedToken] = useState(null);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [encodedToken, setEncodedToken] = useState(null);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+  const [user, setUser] = useState(
+    localStorage.getItem("user")
+      ? JSON.parse(localStorage.getItem("user"))
+      : null
+  );
 
-    const loginUser = async ({ email, password }) => {
-        try {
-            const userData = await axios.post("/api/auth/login", {
-                email: email,
-                password: password
-            });
-            setEncodedToken(userData.data.encodedToken);
-            setFirstName((p) => userData.data.foundUser.firstName);
-            setLastName((p) => userData.data.foundUser.lastName);
-        }
-        catch (error) {
-            console.log("error");
-          }
+  useEffect(() => {
+    if (user) {
+      navigate("/");
     }
-    return (
-        <AuthContext.Provider value={{ firstName, lastName, encodedToken, loginUser }}>
-            {children}
-        </AuthContext.Provider>
-    )
-}
+  }, [user]);
 
-const useAuth = ()=> useContext(AuthContext)
-export { AuthProvider, useAuth }
+  const loginHandler = async ({ email, password }) => {
+    try {
+      console.log(email);
+      console.log(password);
+      const response = await axios.post("/api/auth/login", { email, password });
+      localStorage.setItem(
+        "user",
+        JSON.stringify({
+          encodedToken: response.data.encodedToken,
+          firstName: response.data.foundUser.firstName,
+          lastName: response.data.foundUser.lastName,
+          email: response.data.foundUser.email,
+        })
+      );
+      setUser({
+        encodedToken: response.data.encodedToken,
+        firstName: response.data.foundUser.firstName,
+        lastName: response.data.foundUser.lastName,
+        email: response.data.foundUser.email,
+      });
+      console.log(response.data);
+      navigate("/");
+    } catch (error) {
+      console.log(error.response);
+    }
+  };
+  const logoutHandler = () => {
+    localStorage.removeItem("user");
+    setUser(null);
+  };
+  return (
+    <AuthContext.Provider
+      value={{
+        firstName,
+        lastName,
+        encodedToken,
+        email,
+        password,
+        setEmail,
+        setPassword,
+        loginHandler,
+        user,
+        logoutHandler
+      }}
+    >
+      {children}
+    </AuthContext.Provider>
+  );
+};
+
+const useAuth = () => useContext(AuthContext);
+export { AuthProvider, useAuth };
