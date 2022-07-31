@@ -53,6 +53,29 @@ const AuthProvider = ({ children }) => {
     localStorage.removeItem("user");
     setUser(null);
   };
+  const signUpHandler = async (formData) => {
+    try {
+      const response = await axios.post("/api/auth/signup",formData);
+      localStorage.setItem(
+        "user",
+        JSON.stringify({
+          encodedToken: response.data.encodedToken,
+          firstName: response.data.createdUser.firstName,
+          lastName: response.data.createdUser.lastName,
+          email: response.data.createdUser.email,
+        })
+      );
+      setUser({
+        encodedToken: response.data.encodedToken,
+        firstName: response.data.createdUser.firstName,
+        lastName: response.data.createdUser.lastName,
+        email: response.data.createdUser.email,
+      });
+      navigate("/");
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <AuthContext.Provider
       value={{
@@ -65,7 +88,8 @@ const AuthProvider = ({ children }) => {
         setPassword,
         loginHandler,
         user,
-        logoutHandler
+        logoutHandler,
+        signUpHandler
       }}
     >
       {children}

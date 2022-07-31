@@ -1,5 +1,6 @@
 import { useAuth } from 'context/AuthContext';
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import './login.css'
 
 export const Login = () => {
@@ -47,6 +48,7 @@ return (
         Login with guest user
       </button>
       <button className="login-button" onClick = {(event) => loginButton({event, email, password})} >Login</button>
+    <Link to='/signup'>Create a new Account</Link>
     </div>
   </div>
 );
