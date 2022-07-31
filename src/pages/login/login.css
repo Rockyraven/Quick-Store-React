@@ -1,12 +1,12 @@
 .login-page-container{
-    height: 90vh;
+    min-height: 110vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .login-wrapper{
-    height: 30rem;
+    height: auto;
     width: 25rem;
     border: 1px solid var(--primary-color);
     background-color: var(--clr-border-color-3);
