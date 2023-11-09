@@ -1,4 +1,5 @@
-const { createContext, useContext, useEffect, useState } = require("react");
+import { createContext, useContext, useEffect, useState } from "react";
+import axios from "axios";
 
 const ProductContext = createContext()
 
@@ -7,12 +8,19 @@ export const ProductProvider = ({children}) => {
     const [ product, setProduct ] = useState([])
     const [category, setcategory ] = useState([]);
 
-    useEffect(()=>{
-        fetch('/api/products')
-        .then(res=>res.json())
-        .then(data=>setProduct(data.products))
     
-      },[])
+    const getProduct = async () => {
+      try {
+        const res = await axios.get('http://localhost:5000/')
+        setProduct(res);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    useEffect(()=>{
+      getProduct();
+       
+    },[])
     useEffect(()=>{
         fetch('/api/categories')
         .then(res=>res.json())

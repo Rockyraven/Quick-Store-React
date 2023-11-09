@@ -3,10 +3,15 @@ import { useWish } from "context/WishContext";
 import React from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
+import { useProduct } from "context/ProductContext";
+import { useCart } from "context/CartContext";
 
 export const Navbar = () => {
-  const { wishlist, cart } = useWish();
+  const { wishlist } = useWish();
   const { user, logoutHandler } = useAuth();
+  const { product } = useProduct();
+  const {cart} = useCart();
+  // console.log(product.filter(item =>  item.title.includes("Robbie")));
   return (
     <nav className="nav-heading">
       <Link to="/">
