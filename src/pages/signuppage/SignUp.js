@@ -7,14 +7,13 @@ export const SignUp = () => {
     const {signUpHandler} = useAuth();
       const [ errorInput, setErrorInput ] = useState("");
       const [formData, setFormData] = useState( {
-        firstName: "",
-        lastName: "",
+        userName: "",
         email: "",
         password: "",
       });
       const [confirmPassword, setConfirmPassword] = useState("");
       const submitHandler = () => {
-        if(formData.password.length<6 || formData.firstName === "" || formData.lastName === "" || formData.email === "" || formData.password !== confirmPassword  ) {
+        if(formData.password.length<6 || formData.userName === "" || formData.email === "" || formData.password !== confirmPassword  ) {
           setErrorInput("Invalid Data..")
         }
         else {
@@ -28,23 +27,15 @@ export const SignUp = () => {
           <div className="login-wrapper">
             <h1 className="login-tilte">Sign Up</h1>
             <p className="error-input">{errorInput}</p>
+           
             <input
               type="text"
               id="outlined-password-input"
               className="input-box"
               label="user"
               autoComplete="current-password"
-              placeholder="First Name"
-              onInput={(e) => setFormData(prev => ({...prev, firstName: e.target.value}))}
-            />
-            <input
-              type="text"
-              id="outlined-password-input"
-              className="input-box"
-              label="user"
-              autoComplete="current-password"
-              placeholder="Last Name"
-              onInput={(e) => setFormData(prev => ({...prev, lastName: e.target.value}))}
+              placeholder="Name"
+              onInput={(e) => setFormData(prev => ({...prev, userName: e.target.value}))}
               />
             <input
               type="email"

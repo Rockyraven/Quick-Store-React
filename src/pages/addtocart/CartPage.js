@@ -2,15 +2,20 @@ import { CartCard } from "component";
 import { useWish } from "context/WishContext";
 import React, { useEffect, useState } from "react";
 import "./addtocart.css";
+import { useCart } from "context/CartContext";
 
 export const CartPage = () => {
-  const { cart, total } = useWish();
+  const { total } = useWish();
+  const {getCart, cart} = useCart();
   const [ totalQuantity, setTotalQuantity ] = useState(0);
   const quantityHandler = () => {
     let qty = 0;
     cart.map(cartItem => qty += cartItem.quantity)
     setTotalQuantity(qty);
 }
+useEffect(() => {
+  getCart();
+}, [])
 useEffect(()=> {
     quantityHandler();
 },[cart])
@@ -20,17 +25,17 @@ useEffect(()=> {
    
     <div className="cart-page">
       <div className="wishlist-card">
-        {cart.map(({ _id, price, title, brand, rating, discount, imgSrc,quantity }) => (
+        {cart.map(item => (
           <CartCard
-            _id={_id}
-            price={price}
-            title={title}
-            key={_id}
-            brand={brand}
-            rating={rating}
-            discount={discount}
-            imgSrc={imgSrc}
-            quantity={quantity}
+            _id={item._id}
+            price={item.price}
+            title={item.title}
+            key={item._id}
+            brand={item.brand}
+            rating={item.rating}
+            discount={item.discount}
+            imgSrc={item.image}
+            quantity={item.quantity}
           />
         ))}
       </div>
