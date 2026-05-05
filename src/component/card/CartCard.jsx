@@ -1,3 +1,4 @@
+import { useCart } from 'context/CartContext';
 import { useWish } from 'context/WishContext';
 import React from 'react'
 
@@ -13,7 +14,8 @@ import React from 'react'
         _id}
     ) => {
 
-    const {  addToWishList, removeToCart, increaseQuantity, decreaseQuantity} = useWish();
+    const {  addToWishList, increaseQuantity, decreaseQuantity} = useWish();
+    const {removeToCart} = useCart();
     const moveToWishListHandler = () => { 
         addToWishList({ title,
             brand,
@@ -48,7 +50,7 @@ import React from 'react'
                                 <button onClick={ () => increaseQuantity(_id) }>+</button>
                                 </div>
                             <div className="wishlist-button">
-                            <button className="move-wishlist"  onClick={ moveToWishListHandler }>Move to Wishlist</button>
+                            <button className="move-wishlist"  onClick={() => addToWishList(_id) }>Move to Wishlist</button>
                                 <button className="remove-cart"  onClick={() => removeToCart(_id)}>Remove to Cart</button>
                             </div>
                         </div>

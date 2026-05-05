@@ -4,9 +4,18 @@ import { brandBanner } from 'assets'
 import './landingpage.css'
 import { useProduct } from 'context/ProductContext'
 import { CategoryCard } from 'component/card/CategoryCard'
+import { useEffect } from 'react'
+import { useWish } from 'context/WishContext'
+import { useCart } from 'context/CartContext'
 
 export const LandingPage = () => {
-    const { category } = useProduct()
+    const { category } = useProduct();
+    const {getWishlist} = useWish();
+    const {getCart} = useCart();
+    useEffect(() => {
+      getWishlist();
+      getCart();
+    },[])
     return (
         
         <main>

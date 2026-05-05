@@ -45,4 +45,15 @@
 .login-section .fa{
     font-size: 2rem;
 }
+.logout-button{
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 5px 0 5px;
+    
+}
+.logout-button:hover{
+    background-color: var(--primary-color);
+}
 
