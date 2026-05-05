@@ -2,6 +2,7 @@ import { AuthProvider } from "context/AuthContext";
 import { NavProvider } from "context/NavContext";
 import { ProductProvider } from "context/ProductContext";
 import { WishProvider } from "context/WishContext";
+import { CartProvider } from "context/CartContext";
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
@@ -10,7 +11,7 @@ import "./index.css";
 import { makeServer } from "./server";
 
 // Call make Server
-makeServer();
+// makeServer();
 
 ReactDOM.render(
   <BrowserRouter>
@@ -18,7 +19,9 @@ ReactDOM.render(
       <NavProvider>
         <ProductProvider>
           <WishProvider>
-            <App />
+            <CartProvider>
+              <App />
+            </CartProvider>
           </WishProvider>
         </ProductProvider>
       </NavProvider>

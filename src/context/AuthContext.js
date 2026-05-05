@@ -1,12 +1,12 @@
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useWish } from "./WishContext";
 const { createContext, useState, useContext, useEffect } = require("react");
 
 const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  const [userName, setuserName] = useState("");
   const [encodedToken, setEncodedToken] = useState(null);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -22,42 +22,66 @@ const AuthProvider = ({ children }) => {
       navigate("/");
     }
   }, [user]);
-
+  
   const loginHandler = async ({ email, password }) => {
     try {
-      console.log(email);
-      console.log(password);
-      const response = await axios.post("/api/auth/login", { email, password });
+      console.log(email, password);
+      const response = await axios.post("http://localhost:5000/user/signin", { email, password });
+      console.log(response);
       localStorage.setItem(
         "user",
         JSON.stringify({
-          encodedToken: response.data.encodedToken,
-          firstName: response.data.foundUser.firstName,
-          lastName: response.data.foundUser.lastName,
-          email: response.data.foundUser.email,
+          token: response.data.token,
+          userName: response.data.createdUser.username,
+          email: response.data.createdUser.email,
         })
       );
       setUser({
-        encodedToken: response.data.encodedToken,
-        firstName: response.data.foundUser.firstName,
-        lastName: response.data.foundUser.lastName,
-        email: response.data.foundUser.email,
+        token: response.data.token,
+        userName: response.data.createdUser.username,
+        email: response.data.createdUser.email,
       });
-      console.log(response.data);
+      console.log(response.data.token);
       navigate("/");
     } catch (error) {
-      console.log(error.response);
+      console.log(error);
     }
   };
+  console.log(user);
+  // logout handler
   const logoutHandler = () => {
     localStorage.removeItem("user");
     setUser(null);
+    navigate('/login');
+  };
+
+  const signUpHandler = async (formData) => {
+    try {
+      console.log(formData);
+      const response = await axios.post("http://localhost:5000/user/signin", formData);
+      console.log(response);
+      localStorage.setItem(
+        "user",
+        JSON.stringify({
+          token: response.data.token,
+          userName: response.data.createdUser.username,
+          email: response.data.createdUser.email,
+        })
+      );
+      setUser({
+        token: response.data.token,
+        userName: response.data.createdUser.username,
+        email: response.data.createdUser.email,
+      });
+      navigate("/");
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <AuthContext.Provider
       value={{
-        firstName,
-        lastName,
+        userName,
         encodedToken,
         email,
         password,
@@ -65,7 +89,8 @@ const AuthProvider = ({ children }) => {
         setPassword,
         loginHandler,
         user,
-        logoutHandler
+        logoutHandler,
+        signUpHandler
       }}
     >
       {children}

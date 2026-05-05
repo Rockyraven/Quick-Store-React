@@ -36,9 +36,11 @@
 }
 .move-wishlist{
     background-color: var(--primary-color);
+    cursor: pointer;
 }
 .remove-cart:hover{
     background-color: var(--primary-color);
+    cursor: pointer;
 }
 .cart-page{
     display: flex;
